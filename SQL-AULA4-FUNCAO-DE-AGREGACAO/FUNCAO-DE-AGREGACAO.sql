@@ -1,0 +1,39 @@
+-- AULA 4 FUNÇÕES DE AGREGAÇÃO NO SQL
+-- (SUM, COUNT, AVG, MIN E MAX)
+SELECT 
+	count(Nome)
+FROM clientes;
+
+SELECT 
+	count(Telefone)
+FROM clientes;
+
+-- COUNT(*) RETORNA A QUANTIDADE TOTAL DE LINHAS DE UMA TABELA
+SELECT 
+	count(*)
+FROM clientes;
+
+-- COUNT(DISTINCT) RETORNA CONTAGEM DISTINTA DE VALORES DE UMA TABELA
+SELECT 
+	count(distinct Escolaridade)
+FROM clientes;
+
+-- SUM RETORNA A SOMA TOTAL DE VALORES DE UMA COLUNA
+SELECT
+	sum(Receita_venda)
+FROM pedidos;
+
+-- AVG RETORNA A MÉDIA DOS VALORES DE UMA COLUNA
+SELECT
+	avg(Receita_venda)
+FROM pedidos;
+
+-- MIN RETORNA O VALOR MÍNIMO DE COLUNA
+SELECT
+	min(Receita_venda)
+FROM pedidos;
+
+-- MAX RETORNA O VALOR MÁXIMO DE UMA COLUNA
+SELECT
+	max(Receita_venda)
+FROM pedidos;
